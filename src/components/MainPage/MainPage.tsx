@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { UserList } from 'components/UserList/UserList';
+import { UserList } from 'components';
 import { getUsers } from 'utilities/restUtil';
 
 import css from './MainPage.module.css';
