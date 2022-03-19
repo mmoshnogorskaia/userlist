@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, OnlineStatus } from '../../model';
+import { User, OnlineStatus } from 'model';
 import css from './UserCard.module.css';
 
 interface UserCardProps {

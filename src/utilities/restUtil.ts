@@ -1,4 +1,4 @@
-import { User } from '../model';
+import { User } from 'model';
 
 const getResponseBody = async (url: string) => {
     const response = await fetch(url);

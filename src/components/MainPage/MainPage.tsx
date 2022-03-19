@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { UserList } from '../UserList/UserList';
-import { getUsers } from '../../utilities/restUtil';
+import { UserList } from 'components/UserList/UserList';
+import { getUsers } from 'utilities/restUtil';
 
 import css from './MainPage.module.css';
 

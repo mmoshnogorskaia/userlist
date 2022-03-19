@@ -1,6 +1,6 @@
 import React from 'react';
-import { UserCard } from '../UserCard/UserCard';
-import { User } from '../../model';
+import { UserCard } from 'components/UserCard/UserCard';
+import { User } from 'model';
 
 import css from './UserList.module.css';
 
