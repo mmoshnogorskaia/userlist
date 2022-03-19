@@ -7,17 +7,17 @@ import css from './MainPage.module.css';
 export const MainPage: React.FC = () => {
     const [users, setUsers] = useState<any>([]);
 
-    useEffect(() => { loadUsers() }, []);
+    useEffect(() => { loadUsers(); }, []);
 
     const loadUsers = async () => {
         const users = await getUsers();
-        console.log('users', users);
         setUsers(users);
     };
 
     return (
         <div className={css.container}>
             <UserList users={users} />
+            {/* <button className={css.loadButton}>More</button> */}
         </div>
     );
 };

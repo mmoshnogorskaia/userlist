@@ -1,5 +1,5 @@
 import React from 'react';
-import { User } from '../../model';
+import { User, OnlineStatus } from '../../model';
 import css from './UserCard.module.css';
 
 interface UserCardProps {
@@ -7,9 +7,23 @@ interface UserCardProps {
 }
 
 export const UserCard: React.FC<UserCardProps> = ({ user }) => {
+    const { picture, personal, name, location, online_status } = user;
     return (
         <div className={css.container}>
-            123
+            <div className={css.pictureContainer}>
+                {picture &&
+                    <img src={picture.url} className={css.picture} alt='User picture' />
+                }
+            </div>
+            <div className={css.username}>
+                <div className={css.age}>{personal.age}</div>
+                {name}
+                <div className={`${css.onlineStatus} ${online_status === OnlineStatus.Online ? css.online : ''}`}></div>
+            </div>
+            <div className={css.distance}>
+                {location.distance}
+                <div className={css.distanceIcon}>&#10147;</div>
+            </div>
         </div>
     );
 };
