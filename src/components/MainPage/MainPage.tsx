@@ -17,7 +17,6 @@ export const MainPage: React.FC = () => {
     return (
         <div className={css.container}>
             <UserList users={users} />
-            {/* <button className={css.loadButton}>More</button> */}
         </div>
     );
 };

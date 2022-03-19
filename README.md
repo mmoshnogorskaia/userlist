@@ -21,3 +21,5 @@ Features included:
 * Cors proxy
 * User last time online appears on hover on offline status icon
 * User location is displayed like a tooltip on hover on location icon
+* TODOs are included for future improvenments
+* Tests and virtual scroll is also left for future development

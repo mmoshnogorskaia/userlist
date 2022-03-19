@@ -6,18 +6,19 @@ const getResponseBody = async (url: string) => {
     return stream.json();
 }
 
-export const getUsers = async () => {
+export const getUsers = async () => { // TODO: Add backend types validation
     try {
-        const userResponse = await getResponseBody('/search?length=20');
+        const userResponse = await getResponseBody('/search?length=20'); // TODO: Move URLs to constants file
         const users = userResponse.items;
-        const detailedInfoQuery = users.map(({ id }: any) => `ids=${id}`).join('&');
+        const detailedInfoQuery = users.map(({ id }: Partial<User>) => `ids=${id}`).join('&');
         const detailedResponce = await getResponseBody(`/profiles?${detailedInfoQuery}`);
 
-        return users.map((user: any) => {
-            const userDetails = detailedResponce.find((details: any) => user.id === details.id);
+        return users.map((user: Partial<User>) => {
+            const userDetails = detailedResponce.find((details: Partial<User>) => user.id === details.id);
             return { ...user, ...userDetails };
         });
     } catch (e) {
         console.log(e);
+        return [];
     }
 };

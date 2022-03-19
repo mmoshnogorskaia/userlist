@@ -1,15 +1,8 @@
 .container {
-    background: #283e54;
+    background: #283e54; /* TODO: Use color variables */
     padding: 20px;
     display: flex;
     min-height: 100%;
     flex-direction: column;
     align-items: center;
-}
-
-.loadButton {
-    width: 200px;
-    height: 50px;
-    font-size: 20px;
-    margin-top: 20px;
 }

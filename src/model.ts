@@ -12,7 +12,7 @@ interface Measurement {
 
 interface Personal {
     age: number;
-    body_hair: string;
+    body_hair: string; // TODO: Check backend for union types
     body_type: string;
     ethnicity: string;
     eye_color: string;

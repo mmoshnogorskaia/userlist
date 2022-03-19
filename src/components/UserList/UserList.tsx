@@ -8,12 +8,10 @@ interface UserListProps {
     users: ReadonlyArray<User>;
 }
 
-export const UserList: React.FC<UserListProps> = ({ users }) => {
-    return (
-        <div className={css.container}>
-            {users.map(user =>
-                <UserCard user={user} key={user.id} />
-             )}
-        </div>
-    );
-};
+export const UserList: React.FC<UserListProps> = ({ users }) => (
+    <div className={css.container}>
+        {users.map(user =>
+            <UserCard user={user} key={user.id} />
+        )}
+    </div>
+);

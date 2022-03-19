@@ -7,8 +7,19 @@ interface UserCardProps {
     user: User;
 }
 
+const locationIcon = '&#10147;'; // TODO: Create separate icons file
+
 export const UserCard: React.FC<UserCardProps> = ({ user }) => {
-    const { picture, personal, name, location, online_status, last_login, headline } = user;
+    const {
+        picture,
+        personal,
+        name,
+        location,
+        online_status,
+        last_login,
+        headline
+    } = user;
+
     return (
         <div className={css.container}>
             <div className={css.pictureContainer}>
@@ -24,8 +35,8 @@ export const UserCard: React.FC<UserCardProps> = ({ user }) => {
                 }
             </div>
             <div className={css.distance}>
-                {location.distance}m
-                <div className={css.distanceIcon} title={location.name}>&#10147;</div>
+                {location.distance}m{/* TODO: Create utility function to parse to different measurements */}
+                <div className={css.distanceIcon} title={location.name}>{locationIcon}</div>
             </div>
             <div className={css.headline}><i>{headline}</i></div>
         </div>
