@@ -1,0 +1,22 @@
+.container {
+    background: #314d69;
+    min-height: 400px;
+    margin-bottom: 20px;
+    min-width: 250px;
+    max-width: 350px;
+    width: 100%;
+}
+
+@media (min-width: 600px) {
+    .container {
+        width: 45%;
+        margin: 2%;
+    }
+}
+
+@media (min-width: 850px) {
+    .container {
+        width: 300px;
+        margin: 1%;
+    }
+}
