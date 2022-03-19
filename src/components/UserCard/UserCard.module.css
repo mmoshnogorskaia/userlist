@@ -23,13 +23,13 @@
 }
 
 .username {
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     align-items: center;
 }
 
 .distance {
-    margin-top: 10px;
+    margin-top: 5px;
     display: flex;
 }
 
@@ -38,6 +38,11 @@
     transform: rotate(-45deg);
     bottom: 2px;
     position: relative;
+    cursor: default;
+}
+
+.distanceIcon:hover {
+    color: white;
 }
 
 .age {
@@ -46,18 +51,12 @@
     margin-right: 5px;
 }
 
-.onlineStatus {
-    width: 10px;
-    height: 10px;
-    background-color: red;
-    border-radius: 50%;
-    margin-left: 5px;
-    position: relative;
-    top: 2px;
-}
-
-.online {
-    background-color: greenyellow;
+.headline {
+    font-size: 10px;
+    width: 80%;
+    margin-top: 10px;
+    height: 25px;
+    overflow: hidden;
 }
 
 @media (min-width: 600px) {

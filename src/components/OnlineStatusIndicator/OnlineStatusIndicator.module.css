@@ -1,0 +1,17 @@
+.indicator {
+    width: 10px;
+    height: 10px;
+    background-color: greenyellow;
+    border-radius: 50%;
+    margin-left: 5px;
+    position: relative;
+    top: 2px;
+}
+
+.offline {
+    background-color: red;
+}
+
+.offline:hover {
+    background-color: darkred;
+}

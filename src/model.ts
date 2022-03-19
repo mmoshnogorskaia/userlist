@@ -43,7 +43,7 @@ export interface User {
     is_plus: boolean;
     last_login: string;
     name: string;
-    online_status: OnlineStatus;
+    online_status?: OnlineStatus;
     picture?: Picture;
     headline: string;
     location: Location;
